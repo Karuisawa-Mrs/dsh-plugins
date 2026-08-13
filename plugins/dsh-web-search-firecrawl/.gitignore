@@ -1,0 +1,4 @@
+node_modules/
+lib/*.js.map
+lib/types/*.js.map
+*.tsbuildinfo

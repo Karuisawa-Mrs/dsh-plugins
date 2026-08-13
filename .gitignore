@@ -1,0 +1,18 @@
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Plugin-local artifacts (each plugin's own .gitignore covers lib/*.js.map)
+**/.pnpm-store/
+
+# IDE
+.vscode/
+.idea/
+
+# OS detritus
+*.swp
+*~
+
+# Local-only artifacts (kept on disk; never pushed)
+/push-via-api.mjs
+/plugins/dsh-llm-multimodal/

@@ -1,0 +1,20 @@
+# dsh-web-search-firecrawl: a Firecrawl-backed WebSearchProvider for ctx.web.
+# Installed via `dsh plugin add file:./dsh-web-search-firecrawl`.
+#
+# This is the bundle's contribution to the loader entry tree, so it uses the
+# `insert` form (one entry added to the empty root). An id-targeted replace
+# patch is meant for a profile layer that overrides an existing row — using
+# it here would log "patch: entry not found" and add nothing.
+#
+# Selection is driven by the `searchProvider` field of the `web` row in
+# @deepseek-ai/dsh-base; the local profile must override it to point at this
+# provider's id (`firecrawl-local`). See README.md for the recommended
+# profile-layer override.
+
+- insert:
+    - id: web-search-firecrawl
+      name: '@dsh-plugs-dev/dsh-web-search-firecrawl'
+      config:
+        baseURL: http://localhost:3002
+        limit: 10
+        noAuth: true
